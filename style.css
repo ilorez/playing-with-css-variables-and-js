@@ -1,0 +1,125 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-size: 32px;
+    font-family: 'Courier New', Courier, monospace, sans-serif;
+}
+
+body {
+    padding: 30px;
+    background-color: rgb(53, 53, 53);
+    color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+}
+
+/* header style  */
+header {
+    margin-bottom: 20px;
+}
+
+header h1 {
+    font-size: 1.5rem;
+}
+
+header h1 span {
+    font-size: 1.5rem;
+    color: rgb(184, 148, 81);
+}
+
+/* main style  */
+main {
+    background-color: rgb(37, 37, 37);
+    padding: 30px;
+    border-radius: 10px;
+    width: 70vw;
+    display: flex;
+    flex-direction: column;
+    box-shadow: 0px 0px 100px rgb(22, 22, 22);
+
+}
+
+.controles div {
+    display: flex;
+    justify-content: space-around;
+    width: 100%;
+}
+
+.controles div input {
+    flex-grow: 1;
+}
+
+.controles div label {
+    flex-grow: 1;
+    width: 600px;
+}
+
+.controles div input#SColor {
+    flex-grow: 0;
+    height: 30px;
+    border: none;
+    border-radius: 10px;
+}
+
+.myIdImg {
+    margin-top: 50px;
+    display: flex;
+    justify-content: center;
+
+}
+
+.myIdImg img {
+    width: 100%;
+    border-style: solid;
+}
+
+/* applique style control  */
+#myImg {
+    filter: blur(0px);
+    border-color: #fff;
+    border-width: 0px;
+}
+
+@media (max-width:870px) {
+    header h1 {
+        font-size: 1.2rem;
+    }
+
+    header h1 span {
+        font-size: 1.2rem;
+
+    }
+
+    main {
+        width: 90vw;
+
+    }
+
+    .controles div {
+        flex-direction: column;
+    }
+}
+
+@media (max-width:710px) {
+    header h1 {
+        font-size: 0.8rem;
+    }
+
+    header h1 span {
+        font-size: 0.8rem;
+    }
+}
+
+@media (max-width:490px) {
+    header h1 {
+        font-size: 0.5rem;
+    }
+
+    header h1 span {
+        font-size: 0.5rem;
+    }
+}
