@@ -1,20 +1,11 @@
-const myControls = [...document.querySelectorAll("input")]
-const myImg = document.querySelector("#myImg")
-myControls[0].addEventListener('change', e => {
-    myImg.style.setProperty('border-width', `${myControls[0].value}px`)
-})
-myControls[0].addEventListener('mousemove', e => {
-    myImg.style.setProperty('border-width', `${myControls[0].value}px`)
-})
-myControls[1].addEventListener('change', e => {
-    myImg.style.setProperty('filter', `blur(${myControls[1].value}px)`)
-})
-myControls[1].addEventListener('mousemove', e => {
-    myImg.style.setProperty('filter', `blur(${myControls[1].value}px)`)
-})
-myControls[2].addEventListener('change', e => {
-    myImg.style.setProperty('border-color', `${myControls[2].value}`)
-})
-myControls[2].addEventListener('mousemove', e => {
-    myImg.style.setProperty('border-color', `${myControls[2].value}`)
-})
+const myControls = document.querySelectorAll(".controles input")
+function activeChange(){
+    // next ligne for change value of property on root variables
+    // we use 'this' keyword for get that input we changing on it (To learn about 'this', look to "README" file)
+    // this.name = property name
+    // this.vlue = property value (without measuring unit)
+    // this.dataset.sizing = property measuring unit
+    document.documentElement.style.setProperty(`--${this.name}`,this.value + this.dataset.sizing)
+}
+myControls.forEach(input =>input.addEventListener('change',activeChange));
+myControls.forEach(input =>input.addEventListener('mousemove',activeChange));
