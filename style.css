@@ -5,7 +5,11 @@
     font-size: 32px;
     font-family: 'Courier New', Courier, monospace, sans-serif;
 }
-
+:root{
+    --blur:10px;
+    --space:10px;
+    --color:rgb(248, 123, 6);
+}
 body {
     padding: 30px;
     background-color: rgb(53, 53, 53);
@@ -28,7 +32,7 @@ header h1 {
 
 header h1 span {
     font-size: 1.5rem;
-    color: rgb(184, 148, 81);
+    color: var(--color);
 }
 
 /* main style  */
@@ -39,7 +43,7 @@ main {
     width: 70vw;
     display: flex;
     flex-direction: column;
-    box-shadow: 0px 0px 100px rgb(22, 22, 22);
+    box-shadow: 0px 0px calc(40px + var(--space)) var(--color);
 
 }
 
@@ -78,10 +82,11 @@ main {
 }
 
 /* applique style control  */
+
 #myImg {
-    filter: blur(0px);
-    border-color: #fff;
-    border-width: 0px;
+    filter: blur(var(--blur));
+    border-color: var(--color);
+    border-width:var(--space);
 }
 
 @media (max-width:870px) {
